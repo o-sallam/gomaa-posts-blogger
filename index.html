@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#131416">
+  <meta name="description" content="بوست الجمعة — مساحة لأفكار وتأملات عن الحياة والشغل ومعرفة النفس. اقرأ على مهلك واحفظ ما يلهمك.">
+  <title>بوست الجمعة — مساحة لفكرة</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="data.js" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/posts.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a href="#posts" class="skip-link">انتقل إلى التدوينات</a>
+  <svg class="icon-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4.5A1.5 1.5 0 0 1 7.5 3h9A1.5 1.5 0 0 1 18 4.5V21l-6-4-6 4Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M20 12H4m6-6-6 6 6 6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.1M4 12h.1M4 18h.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 6c-3-2-7-2-10-1v15c3-1 7-1 10 1 3-2 7-2 10-1V5c-3-1-7-1-10 1Zm0 0v15"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m7 10 5 5 5-5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#" aria-label="بوست الجمعة، الرئيسية">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>بوست <strong>الجمعة</strong><small>أفكار من الحياة، للحياة.</small></span>
+      </a>
+      <nav class="main-nav" aria-label="التنقل الرئيسي">
+        <button class="nav-link is-active" data-nav="all" aria-current="page">التدوينات</button>
+        <button class="nav-link" data-nav="saved">المحفوظات <span class="saved-count" id="saved-count">0</span></button>
+        <button class="nav-link" id="about-button">عن المدونة</button>
+      </nav>
+      <form class="search-box" id="search-form" role="search">
+        <label class="sr-only" for="search">ابحث في التدوينات</label>
+        <svg class="icon"><use href="#i-search"/></svg>
+        <input id="search" type="search" placeholder="عن أي فكرة تبحث؟" autocomplete="off">
+        <kbd aria-hidden="true">/</kbd>
+      </form>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <p class="eyebrow"><span class="status-dot"></span> كلمات بسيطة. أثر يبقى.</p>
+        <h1 id="intro-title">مساحة لفكرة، <span>ووقت لنفسك.</span></h1>
+        <p class="intro-description">عن الشغل، والحياة، والحاجات اللي بنتعلمها في الطريق.<br class="desktop-break"> خد لك قهوة، واقرأ على مهلك.</p>
+      </div>
+      <div class="intro-note"><span class="little-orbit" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>أفكار تتجمع.<br><strong>والمعنى يكبر.</strong></span></div>
+    </section>
+
+    <div class="page-layout">
+      <div class="main-column">
+        <section id="featured-section" class="featured-section" aria-labelledby="featured-label">
+          <div class="section-kicker" id="featured-label"><svg class="icon"><use href="#i-spark"/></svg> أحدث ما كتبت <span class="rule"></span></div>
+          <div id="featured-post"></div>
+        </section>
+
+        <section id="posts" class="posts-section" aria-labelledby="posts-heading" tabindex="-1">
+          <div class="section-heading"><div class="heading-with-count"><h2 id="posts-heading">كل التدوينات</h2><span class="count-badge" id="total-count">83</span></div><span class="section-hint">فكرة جديدة في كل قراءة</span></div>
+          <div class="posts-toolbar">
+            <div id="year-filters" class="filter-chips" role="group" aria-label="تصفية حسب السنة"></div>
+            <div class="toolbar-options">
+              <div class="select-wrap"><label for="sort" class="sr-only">ترتيب التدوينات</label><select id="sort"><option value="newest">الأحدث أولًا</option><option value="oldest">الأقدم أولًا</option><option value="shortest">الأقصر قراءة</option></select><svg class="icon"><use href="#i-chevron"/></svg></div>
+              <div class="view-switch" role="group" aria-label="طريقة العرض"><button class="icon-button is-active" id="grid-view" aria-label="عرض شبكي" aria-pressed="true"><svg class="icon"><use href="#i-grid"/></svg></button><button class="icon-button" id="list-view" aria-label="عرض قائمة" aria-pressed="false"><svg class="icon"><use href="#i-list"/></svg></button></div>
+            </div>
+          </div>
+          <p id="results-summary" class="results-summary" role="status" aria-live="polite"></p>
+          <div id="posts-grid" class="posts-grid"></div>
+          <div id="empty-state" class="empty-state" hidden><span class="empty-icon"><svg class="icon"><use href="#i-search"/></svg></span><h3 id="empty-title">لم نجد تدوينات</h3><p id="empty-description">جرّب كلمة مختلفة أو اختر سنة أخرى.</p><button class="button button-tonal" id="reset-filters">عرض كل التدوينات</button></div>
+          <div class="load-more-wrap" id="load-more-wrap"><button id="load-more" class="button button-outline">المزيد من التدوينات <svg class="icon"><use href="#i-chevron"/></svg></button><span id="pagination-info" class="pagination-info"></span></div>
+        </section>
+      </div>
+
+      <aside class="sidebar" aria-label="عن المدونة والأرشيف">
+        <section class="about-card"><div class="author-emblem" aria-hidden="true">ج<span></span></div><span class="mini-label">أهلًا بيك في</span><h2>بوست الجمعة<span class="blue-dot">.</span></h2><p>مش نصائح مثالية، ولا وصفة جاهزة للحياة. مجرد أفكار وتجارب، يمكن تلاقي فيها حاجة تشبهك.</p><button id="sidebar-about" class="text-button">حكاية المدونة <svg class="icon"><use href="#i-arrow"/></svg></button><div class="about-stats"><div><strong id="stat-posts">83</strong><span>تدوينة وفكرة</span></div><div><strong id="stat-since">2015</strong><span>بداية الحكاية</span></div></div></section>
+        <section class="archive-card"><h2><svg class="icon"><use href="#i-book"/></svg> على مر السنين</h2><div id="archive-list" class="archive-list"></div><button id="all-years" class="text-button archive-toggle" aria-expanded="false">عرض كل السنين <svg class="icon"><use href="#i-chevron"/></svg></button></section>
+        <div class="quiet-note"><span class="quote-mark" aria-hidden="true">“</span><p>نقاوم ما نحب<br>ونتحمل ما نكره.</p><span>مصطفى محمود · من أحدث تدوينة</span><div class="google-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></div></div>
+        <button class="saved-shortcut" id="saved-shortcut"><svg class="icon"><use href="#i-bookmark"/></svg><span>فكرة عجبتك؟<small>احفظها وارجع لها في أي وقت.</small></span><svg class="icon"><use href="#i-arrow"/></svg></button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer container"><a href="#" class="footer-brand">بوست الجمعة<span class="blue-dot">.</span></a><p>شوية كلام، يمكن يفرق. <span class="footer-dot">·</span> دمتم بخير.</p><a href="#" class="back-to-top">إلى الأعلى ↑</a></footer>
+
+  <dialog id="reader" class="reader-dialog" aria-labelledby="reader-title"><div class="reader-toolbar"><span class="reader-brand">بوست الجمعة<span class="blue-dot">.</span></span><div class="reader-actions"><button class="icon-button" id="reader-save" aria-label="حفظ التدوينة" aria-pressed="false"><svg class="icon"><use href="#i-bookmark"/></svg></button><button class="icon-button" id="reader-share" aria-label="نسخ رابط التدوينة"><svg class="icon"><use href="#i-share"/></svg></button><span class="toolbar-divider"></span><button class="icon-button" id="reader-close" aria-label="إغلاق التدوينة"><svg class="icon"><use href="#i-close"/></svg></button></div></div><article class="reader-article"><div class="reader-meta" id="reader-meta"></div><h1 id="reader-title" dir="auto"></h1><img class="reader-cover" src="assets/no-image.svg" alt="رسم افتراضي لكتاب مفتوح"><div id="reader-content" class="reader-content" dir="auto"></div><div class="reader-end"><span class="google-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span><p>شكرًا لوقتك. دمتم بخير.</p></div></article></dialog>
+  <dialog id="about-dialog" class="about-dialog" aria-labelledby="about-title"><button id="about-close" class="icon-button about-close" aria-label="إغلاق"><svg class="icon"><use href="#i-close"/></svg></button><div class="author-emblem" aria-hidden="true">ج<span></span></div><p class="eyebrow">أفكار من الحياة، للحياة.</p><h2 id="about-title">حكاية بوست الجمعة<span class="blue-dot">.</span></h2><p>مساحة بتجمع تدوينات الجمعة من سنة <b id="about-since">2015</b>. أفكار وتأملات مكتوبة ببساطة عن الشغل، ومعرفة النفس، والتعلّم من التجارب اليومية.</p><p>تقدر تتصفح التدوينات حسب السنة، تدور على فكرة، أو تحفظ اللي يعجبك علشان ترجع له بعدين. المحفوظات بتفضل على المتصفح اللي بتستخدمه.</p><button id="about-explore" class="button button-tonal">اكتشف التدوينات <svg class="icon"><use href="#i-arrow"/></svg></button></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-notice">فعّل JavaScript لعرض التدوينات والبحث فيها.</div></noscript>
+</body>
+</html>
